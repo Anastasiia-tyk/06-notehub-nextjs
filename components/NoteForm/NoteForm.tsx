@@ -7,8 +7,8 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import * as Yup from "yup";
 
 import css from "./NoteForm.module.css";
-import { createNote } from "../../src/lib/api";
-import type { CreateNoteInput } from "../../src/lib/api";
+import { createNote } from "../../lib/api";
+import type { CreateNoteInput } from "../../lib/api";
 
 export interface NoteFormValues {
     title: string;
