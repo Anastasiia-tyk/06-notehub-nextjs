@@ -63,3 +63,17 @@ export const deleteNote = async (id: string): Promise<Note> => {
     );
     return response.data;
 };
+
+export const fetchNotesById = async (id: string): Promise<Note> => {
+    const token = process.env.NEXT_PUBLIC_NOTEHUB_TOKEN;
+
+    const response = await axios.get<Note>(
+        `${BASE_URL}/${id}`,
+        {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            }
+        }
+    );
+    return response.data;
+};
